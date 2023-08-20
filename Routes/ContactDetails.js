@@ -115,12 +115,6 @@ router.post('/updateData', async (req, res) => {
       { _id: id , "contacts.email": email },
       { $set: {  "contacts.$.name": newname   , "contacts.$.phone": newphone , "contacts.$.email": newemail, } }
    )
-   
-
-    
-
-
-   
 
     res.json({ success: true });
   } catch (error) {

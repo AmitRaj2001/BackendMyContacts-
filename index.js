@@ -1,12 +1,12 @@
 const express = require('express')
 const mongoDB = require("./db");// Importing a custom module that connects to MongoDB
 const app = express()
-const port = process.env.port || 5000;
+const port =  8000;
+//process.env.port ||
 
-
-
+//"https://frontend-my-contacts.vercel.app"
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://frontend-my-contacts.vercel.app");//isi port pr react render ho rahi hai
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");//isi port pr react render ho rahi hai
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
